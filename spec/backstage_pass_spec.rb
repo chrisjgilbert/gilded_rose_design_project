@@ -1,3 +1,5 @@
+require 'backstage_pass'
+
 describe BackstagePass do
 
   describe '#update_quality' do
