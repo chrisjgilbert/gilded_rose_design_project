@@ -17,12 +17,6 @@ describe GildedRose do
       GildedRose.new([aged_brie]).update_quality
       expect(aged_brie.name).to eq "aged brie"
     end
-
-    xit "never lowers quality below 0" do
-      item = Item.new("item", 0, 0)
-      GildedRose.new([item]).update_quality
-      expect(item.quality).to eq(0)
-    end
   end
 
 end
