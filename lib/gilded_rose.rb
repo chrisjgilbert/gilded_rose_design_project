@@ -9,4 +9,8 @@ class GildedRose
       item.update_quality
     end
   end
+
+  def update_sell_in
+    @items.each { |item| item.update_sell_in }
+  end
 end
