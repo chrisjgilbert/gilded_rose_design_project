@@ -1,4 +1,8 @@
-require_relative './item'
+require 'item' 
+require 'decrease_in_value'
+require 'decrease_sell_in_value'
+include DecreaseQuality
+include DescreaseSellIn
 
 class Generic < Item
 
@@ -19,32 +23,12 @@ class Generic < Item
 
   private
 
-  def reduce_sell_in_by_1
-    @sell_in -= 1
-  end
-
   def after_sell_in_period?
     @sell_in <= 0
   end
 
-  def above_min_quality?
-    @quality > 0
-  end
-
   def before_sell_in_period_ends?
     @sell_in > 0
-  end
-
-  def reduce_quality_by_2
-    @quality -= 2
-  end
-
-  def reduce_quality_by_1
-    @quality -= 1
-  end
-
-  def set_quality_at_0
-    @quality = 0
   end
 
 end

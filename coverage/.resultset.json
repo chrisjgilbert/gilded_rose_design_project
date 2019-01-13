@@ -78,6 +78,10 @@
       ],
       "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/generic.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
         null,
         1,
         null,
@@ -99,31 +103,11 @@
         1,
         null,
         1,
-        4,
-        null,
-        null,
-        1,
         7,
         null,
         null,
         1,
-        4,
-        null,
-        null,
-        1,
         16,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        4,
         null,
         null,
         null
@@ -142,6 +126,36 @@
         null,
         1,
         0,
+        null,
+        null
+      ],
+      "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/decrease_in_value.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        null
+      ],
+      "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/decrease_sell_in_value.rb": [
+        1,
+        null,
+        1,
+        4,
+        null,
         null,
         null
       ],
@@ -520,6 +534,6 @@
         null
       ]
     },
-    "timestamp": 1547396698
+    "timestamp": 1547397055
   }
 }
