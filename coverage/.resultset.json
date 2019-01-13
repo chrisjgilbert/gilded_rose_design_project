@@ -189,6 +189,14 @@
         13,
         null,
         null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
         null
       ],
       "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/increase_quality_value.rb": [
@@ -540,6 +548,6 @@
         null
       ]
     },
-    "timestamp": 1547398694
+    "timestamp": 1547398848
   }
 }
