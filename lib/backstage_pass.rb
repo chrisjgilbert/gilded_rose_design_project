@@ -4,6 +4,8 @@ class BackstagePass < Item
     if below_max_quality?
        if sell_in_less_than_10_and_more_than_5?
          update_middle_sell_in_period_quality
+       elsif @sell_in <= 5 and @sell_in> 0
+         @quality += 3
        else
          @quality += 1
        end
