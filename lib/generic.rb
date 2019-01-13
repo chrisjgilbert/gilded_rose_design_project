@@ -14,7 +14,7 @@ class Generic < Item
   def update_quality
     if sell_in_at_0? and above_min_quality?
       reduce_quality_by_2
-    elsif sell_in_above_10? and above_min_quality?
+    elsif sell_in_above_0? and above_min_quality?
       reduce_quality_by_1
     else
       set_quality_at_0

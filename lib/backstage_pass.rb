@@ -6,7 +6,7 @@ class BackstagePass < Generic
 
 #name, sell_in, quality
   def update_quality
-    if sell_in_above_10? and below_max_quality?
+    if sell_in_above_0? and below_max_quality?
       update_based_on_sell_in_period
     elsif sell_in_at_0?
       set_quality_at_0

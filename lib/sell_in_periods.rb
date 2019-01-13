@@ -4,7 +4,7 @@ module SellInPeriods
     @sell_in <= 0
   end
 
-  def sell_in_above_10?
+  def sell_in_above_0?
     @sell_in > 0
   end
 
