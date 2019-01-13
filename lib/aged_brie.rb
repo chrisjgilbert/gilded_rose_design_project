@@ -12,10 +12,14 @@ class AgedBrie < Item
   end
 
   def update_sell_in
-    @sell_in -= 1
+    reduce_sell_in_by_1
   end
 
   private
+
+  def reduce_sell_in_by_1
+    @sell_in -= 1
+  end
 
   def before_sell_in?
     @sell_in > 0
