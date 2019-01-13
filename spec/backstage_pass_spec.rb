@@ -48,7 +48,7 @@ describe BackstagePass do
 
     context 'before_sell_in' do
       it "lowers the sell_in by one after a day" do
-        backstage_pass = BackstagePass.new("Backstage passes to a TAFKAL80ETC concert", 1, 50)
+        backstage_pass = BackstagePass.new("Backstage passes to a TAFKAL80ETC concert", 1, 1)
         backstage_pass.update_quality
         expect(backstage_pass.sell_in).to eq 0
       end

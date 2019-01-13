@@ -12,6 +12,7 @@ class BackstagePass < Item
   private
 
   def update_based_on_sell_in_period
+    @sell_in -= 1
     if during_start_of_sell_in_period?
       update_quality_by_start_of_sell_in_period_amount
     elsif during_middle_of_sell_in_period?
