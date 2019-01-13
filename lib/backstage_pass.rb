@@ -16,20 +16,20 @@ class BackstagePass < Generic
   private
 
   def update_based_on_sell_in_period
-    if during_start_of_sell_in_period?
+    if sell_in_above_10?
       increase_quality_by_1
-    elsif during_middle_of_sell_in_period?
-      update_quality_by_middle_of_sell_in_period_amount
-    elsif during_end_of_sell_in_period?
-      update_quality_by_end_of_sell_in_period_amount
+    elsif sell_in_less_or_equal_to_10_and_more_than_5?
+      update_quality_by_1_or_2
+    elsif sell_in_less_or_equal_to_5_and_more_than_0?
+      update_quality_by_2_or_3
     end
   end
 
-  def update_quality_by_middle_of_sell_in_period_amount
+  def update_quality_by_1_or_2
     quality_at_49? ? increase_quality_by_1 : increase_quality_by_2
   end
 
-  def update_quality_by_end_of_sell_in_period_amount
+  def update_quality_by_2_or_3
     quality_at_48? ? increase_quality_by_2 : increase_quality_by_3
   end
 
