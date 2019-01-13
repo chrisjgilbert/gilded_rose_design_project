@@ -1,7 +1,9 @@
 class BackstagePass < Item
 
   def update_quality
-    @quality += 1
+    if @quality < 50
+      @quality += 1
+    end
   end
 
 end
