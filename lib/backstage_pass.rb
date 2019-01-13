@@ -9,6 +9,8 @@ class BackstagePass < Item
     end
   end
 
+  private
+
   def update_based_on_sell_in_period
     if during_start_of_sell_in_period?
       update_quality_by_start_of_sell_in_period_amount
@@ -18,8 +20,6 @@ class BackstagePass < Item
       update_quality_by_end_of_sell_in_period_amount
     end
   end
-
-  private
 
   def during_sell_in_period?
     @sell_in > 0
