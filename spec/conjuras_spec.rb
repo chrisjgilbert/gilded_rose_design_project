@@ -22,6 +22,12 @@ describe Conjuras do
       conjuras.update_quality
       expect(conjuras.quality).to eq 0
     end
+
+    it "quality will go to 0 from 1" do
+      conjuras = Conjuras.new("item", 5, 1)
+      conjuras.update_quality
+      expect(conjuras.quality).to eq 0
+    end
   end
 
 end
