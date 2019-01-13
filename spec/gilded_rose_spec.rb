@@ -9,6 +9,12 @@ describe GildedRose do
       expect(gilded_rose).to receive(:update_quality)
       gilded_rose.update
     end
+
+    it "calls update quality" do
+      gilded_rose = GildedRose.new("item")
+      expect(gilded_rose).to receive(:update_sell_in)
+      gilded_rose.update
+    end
   end
 
   describe "#update_sell_in" do
