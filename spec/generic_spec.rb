@@ -2,8 +2,15 @@ require 'generic'
 
 describe Generic do
 
-  describe '#update_quality' do
+  describe '#update_sell_in' do
+    it "lowers the sell_in by one after a day" do
+      generic = Generic.new("item", 1, 1)
+      generic.update_sell_in
+      expect(generic.sell_in).to eq 0
+    end
+  end
 
+  describe '#update_quality' do
     context 'before sell_in' do
       it 'lowers quality by one after one day' do
         generic = Generic.new("item", 1, 1)
@@ -15,12 +22,6 @@ describe Generic do
         generic = Generic.new("item", 4, 0)
         generic.update_quality
         expect(generic.quality).to eq(0)
-      end
-
-      it "lowers the sell_in by one after a day" do
-        generic = Generic.new("item", 1, 1)
-        generic.update_quality
-        expect(generic.sell_in).to eq 0
       end
     end
 
