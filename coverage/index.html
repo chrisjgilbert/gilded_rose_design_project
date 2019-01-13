@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-01-13T15:44:54+00:00">2019-01-13T15:44:54+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-01-13T15:46:11+00:00">2019-01-13T15:46:11+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">99.63%</span></span>
+    (<span class="covered_percent"><span class="green">99.64%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.61
+         1.62
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>273</b> relevant lines. 
-    <span class="green"><b>272</b> lines covered</span> and
+    <b>277</b> relevant lines. 
+    <span class="green"><b>276</b> lines covered</span> and
     <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -77,7 +77,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -107,7 +107,7 @@
         <td>8</td>
         <td>7</td>
         <td>1</td>
-        <td>9.5</td>
+        <td>9.9</td>
       </tr>
       
       <tr>
@@ -143,9 +143,9 @@
       <tr>
         <td class="strong"><a href="#f5897621a6f0967675db96f713da172a86e7dcd2" class="src_link" title="spec/conjuras_spec.rb">spec/conjuras_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
-        <td>12</td>
-        <td>12</td>
+        <td>27</td>
+        <td>16</td>
+        <td>16</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -950,8 +950,8 @@
           <code class="ruby">  def update_quality</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
           
           <code class="ruby">    @quality -= 2</code>
         </li>
@@ -1505,20 +1505,20 @@
           <code class="ruby">  def initialize(name, sell_in, quality)</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="7">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="7">
+          <span class="hits">25</span>
           
           <code class="ruby">    @name = name</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="8">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="8">
+          <span class="hits">25</span>
           
           <code class="ruby">    @sell_in = sell_in</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="9">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="25" data-linenumber="9">
+          <span class="hits">25</span>
           
           <code class="ruby">    @quality = quality</code>
         </li>
@@ -2400,8 +2400,8 @@
     <h3>spec/conjuras_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2520,16 +2520,52 @@
         <li class="never" data-hits="" data-linenumber="19">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;won&#39;t lower the quality less than 0&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      conjuras = Conjuras.new(&quot;item&quot;, 5, 0)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      conjuras.update_quality</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(conjuras.quality).to eq 0</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby">end</code>

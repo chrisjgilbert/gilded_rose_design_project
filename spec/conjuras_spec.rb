@@ -16,6 +16,12 @@ describe Conjuras do
       conjuras.update_quality
       expect(conjuras.quality).to eq 8
     end
+
+    it "won't lower the quality less than 0" do
+      conjuras = Conjuras.new("item", 5, 0)
+      conjuras.update_quality
+      expect(conjuras.quality).to eq 0
+    end
   end
 
 end
