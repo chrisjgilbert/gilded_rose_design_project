@@ -1,3 +1,7 @@
+require 'generic'
+require 'increase_in_value'
+include IncreaseQuality
+
 class BackstagePass < Generic
 
 #name, sell_in, quality
@@ -13,7 +17,7 @@ class BackstagePass < Generic
 
   def update_based_on_sell_in_period
     if during_start_of_sell_in_period?
-      update_quality_by_start_of_sell_in_period_amount
+      increase_quality_by_1
     elsif during_middle_of_sell_in_period?
       update_quality_by_middle_of_sell_in_period_amount
     elsif during_end_of_sell_in_period?
@@ -21,16 +25,8 @@ class BackstagePass < Generic
     end
   end
 
-  def below_max_quality?
-    @quality < 50
-  end
-
   def during_start_of_sell_in_period?
     @sell_in > 10
-  end
-
-  def update_quality_by_start_of_sell_in_period_amount
-    @quality += 1
   end
 
   def during_middle_of_sell_in_period?
@@ -38,7 +34,7 @@ class BackstagePass < Generic
   end
 
   def update_quality_by_middle_of_sell_in_period_amount
-    @quality == 49 ? @quality += 1 : @quality += 2
+    @quality == 49 ? increase_quality_by_1 : increase_quality_by_2
   end
 
   def during_end_of_sell_in_period?
@@ -46,7 +42,7 @@ class BackstagePass < Generic
   end
 
   def update_quality_by_end_of_sell_in_period_amount
-    @quality == 48 ? @quality += 2 : @quality += 3
+    @quality == 48 ? increase_quality_by_2 : increase_quality_by_3
   end
 
 end

@@ -1,5 +1,6 @@
-require 'item'
 require 'generic'
+require 'increase_in_value'
+include IncreaseQuality
 
 # name, sell_in, quality
 class AgedBrie < Generic
@@ -13,10 +14,6 @@ class AgedBrie < Generic
   end
 
   private
-
-  def below_max_quality?
-    @quality < 50
-  end
 
   def update_quality_by_before_sell_in_amount
     @quality += 1
