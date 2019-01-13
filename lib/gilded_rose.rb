@@ -6,6 +6,7 @@ class GildedRose
 
   def update
     update_quality
+    update_sell_in
   end
 
   def update_quality

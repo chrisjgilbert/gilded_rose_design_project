@@ -4,21 +4,24 @@ require 'item'
 describe GildedRose do
 
   describe "#update" do
-    it "calls update quality" do
-      gilded_rose = GildedRose.new("item")
+    it "calls update_quality" do
+      item = double(:item)
+      gilded_rose = GildedRose.new(item)
+      allow(item).to receive(:each)
       expect(gilded_rose).to receive(:update_quality)
       gilded_rose.update
     end
 
-    it "calls update quality" do
-      gilded_rose = GildedRose.new("item")
+    it "calls update sell_in" do
+      item = double(:item)
+      gilded_rose = GildedRose.new(item)
+      allow(item).to receive(:each)
       expect(gilded_rose).to receive(:update_sell_in)
       gilded_rose.update
     end
   end
 
   describe "#update_sell_in" do
-
     it "tells the item to update it's sell in if it is more than 0" do
       aged_brie = double(:aged_brie, sell_in: 1)
       expect(aged_brie).to receive(:update_sell_in)
