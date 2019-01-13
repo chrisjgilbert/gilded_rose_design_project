@@ -1,7 +1,8 @@
 require 'item'
+require 'generic'
 
 # name, sell_in, quality
-class AgedBrie < Item
+class AgedBrie < Generic
 
   def update_quality
     if below_max_quality? and before_sell_in?
@@ -9,10 +10,6 @@ class AgedBrie < Item
     elsif below_max_quality? and not before_sell_in?
       update_quality_by_after_sell_in_amount
     end
-  end
-
-  def update_sell_in
-    reduce_sell_in_by_1
   end
 
   private
