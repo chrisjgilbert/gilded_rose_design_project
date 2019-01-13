@@ -3,6 +3,15 @@ require 'item'
 
 describe GildedRose do
 
+  describe "#update_sell_in" do
+
+    it "tells the item to update it's sell in if it is more than 0" do
+      aged_brie = double(:aged_brie, sell_in: 1)
+      expect(aged_brie).to receive(:update_sell_in)
+      GildedRose.new([aged_brie]).update_quality
+    end
+  end
+
   describe "#update_quality" do
 
     it "tells the item to update it's quality" do
