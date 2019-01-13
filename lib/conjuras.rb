@@ -3,8 +3,18 @@ require_relative "./generic"
 class Conjuras < Generic
 
   def update_quality
-    @quality -= 2 if @quality > 2
-    @quality -= 1 if @quality == 1
+    update_quality_by_2 if quality_more_than_2?
+    update_quality_by_1 if quality_is_1?
+  end
+
+  private
+
+  def quality_more_than_2?
+    @quality > 2
+  end
+
+  def quality_is_1?
+    @quality == 1
   end
 
 end
