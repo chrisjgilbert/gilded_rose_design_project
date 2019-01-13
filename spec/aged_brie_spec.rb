@@ -4,6 +4,12 @@ describe AgedBrie do
 
   describe '#update_quality' do
 
+    it "lowers the sell_in by one after a day" do
+      aged_brie = AgedBrie.new("Aged Brie", 1, 0)
+      aged_brie.update_quality
+      expect(aged_brie.sell_in).to eq 0
+    end
+
     context 'before sell_in' do
       it 'raises quality by one after a day' do
         aged_brie = AgedBrie.new("Aged Brie", 1, 0)
