@@ -1,10 +1,6 @@
-require 'generic'
-require 'increase_quality_value'
-include IncreaseQuality
+require 'items_that_increase_in_quality'
+class BackstagePass < IncreasingItem
 
-class BackstagePass < Generic
-
-#name, sell_in, quality
   def update_quality
     if sell_in_above_0? and below_max_quality?
       update_based_on_sell_in_period

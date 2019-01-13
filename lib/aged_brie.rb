@@ -1,9 +1,5 @@
-require 'generic'
-require 'increase_quality_value'
-include IncreaseQuality
-
-# name, sell_in, quality
-class AgedBrie < Generic
+require 'items_that_increase_in_quality'
+class AgedBrie < IncreasingItem
 
   def update_quality
     if below_max_quality? and sell_in_above_0?

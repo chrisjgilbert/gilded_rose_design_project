@@ -51,10 +51,6 @@
       "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/aged_brie.rb": [
         1,
         1,
-        1,
-        null,
-        null,
-        1,
         null,
         1,
         4,
@@ -70,6 +66,14 @@
         2,
         null,
         null,
+        null
+      ],
+      "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/items_that_increase_in_quality.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
         null
       ],
       "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/generic.rb": [
@@ -302,10 +306,6 @@
       "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/backstage_pass.rb": [
         1,
         1,
-        1,
-        null,
-        1,
-        null,
         null,
         1,
         8,
@@ -548,6 +548,6 @@
         null
       ]
     },
-    "timestamp": 1547399284
+    "timestamp": 1547399591
   }
 }
