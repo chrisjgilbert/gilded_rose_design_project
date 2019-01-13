@@ -1,5 +1,5 @@
 require 'item'
-require 'decrease_in_value'
+require 'decrease_quality_value'
 require 'decrease_sell_in_value'
 require 'sell_in_periods'
 
@@ -9,7 +9,6 @@ include SellInPeriods
 
 class Generic < Item
 
-# name, sell_in, quality
   def update_quality
     if after_sell_in_period? and above_min_quality?
       reduce_quality_by_2

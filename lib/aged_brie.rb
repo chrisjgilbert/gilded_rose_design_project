@@ -1,5 +1,5 @@
 require 'generic'
-require 'increase_in_value'
+require 'increase_quality_value'
 include IncreaseQuality
 
 # name, sell_in, quality

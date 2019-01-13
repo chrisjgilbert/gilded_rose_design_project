@@ -118,7 +118,7 @@
         null,
         null
       ],
-      "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/decrease_in_value.rb": [
+      "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/decrease_quality_value.rb": [
         1,
         null,
         1,
@@ -173,7 +173,7 @@
         null,
         null
       ],
-      "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/increase_in_value.rb": [
+      "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/increase_quality_value.rb": [
         1,
         null,
         1,
@@ -536,6 +536,6 @@
         null
       ]
     },
-    "timestamp": 1547397268
+    "timestamp": 1547397439
   }
 }
