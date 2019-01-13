@@ -1,4 +1,4 @@
-require_relative "./generic"
+require "generic"
 
 class Conjuras < Generic
 
