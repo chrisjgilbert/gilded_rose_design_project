@@ -4,12 +4,6 @@ describe Sulfuras do
 
   describe "#update_quality" do
 
-    it "does not change the name" do
-      sulfuras = Sulfuras.new("foo", 0, 0)
-      sulfuras.update_quality
-      expect(sulfuras.name).to eq "foo"
-    end
-
     context 'when item is Sulfuras, Hand of Ragnaros' do
       it 'does not change sell_in' do
         sulfuras = Sulfuras.new("Sulfuras, Hand of Ragnaros", 1, 80)
