@@ -4,7 +4,13 @@ require 'item'
 class AgedBrie < Item
 
   def update_quality
-    @quality += 1 if @quality < 50
+    if @quality < 50
+      if @sell_in > 0
+        @quality =+1
+      else
+        @quality +=2
+      end
+    end
   end
 
 end
