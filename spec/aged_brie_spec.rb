@@ -2,6 +2,16 @@ require 'aged_brie'
 
 describe AgedBrie do
 
+  describe 'update_sell_in' do
+    context 'before sell_in' do
+      it 'reduces sell_in by 1' do
+        aged_brie = AgedBrie.new("Aged Brie", 1, 0)
+        aged_brie.update_sell_in
+        expect(aged_brie.sell_in).to eq(0)
+      end
+    end
+  end
+
   describe '#update_quality' do
 
     context 'before sell_in' do
