@@ -8,12 +8,17 @@ class Generic < Item
       update_quality_by_2
     elsif before_sell_in? and above_min_quality?
       update_quality_by_1
+      reduce_sell_in_by_1
     else
       set_quality_at_0
     end
   end
 
   private
+
+  def reduce_sell_in_by_1
+    @sell_in -= 1
+  end
 
   def after_sell_in?
     @sell_in <= 0
