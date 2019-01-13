@@ -4,12 +4,6 @@ describe BackstagePass do
 
   describe '#update_quality' do
 
-    it "does not change the name" do
-      pass = BackstagePass.new("foo", 0, 0)
-      pass.update_quality
-      expect(pass.name).to eq "foo"
-    end
-
     context 'when item is Backstage passes to a TAFKAL80ETC concert' do
       context 'when sell_in is greater than 10' do
         it 'increases quality by one after each day' do
