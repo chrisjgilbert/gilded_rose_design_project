@@ -2,7 +2,7 @@ class BackstagePass < Generic
 
 #name, sell_in, quality
   def update_quality
-    if during_sell_in_period? and below_max_quality?
+    if before_sell_in_period_ends? and below_max_quality?
       update_based_on_sell_in_period
     elsif after_sell_in_period?
       set_quality_at_0
@@ -19,15 +19,6 @@ class BackstagePass < Generic
     elsif during_end_of_sell_in_period?
       update_quality_by_end_of_sell_in_period_amount
     end
-  end
-
-
-  def during_sell_in_period?
-    @sell_in > 0
-  end
-
-  def after_sell_in_period?
-    @sell_in <= 0
   end
 
   def below_max_quality?

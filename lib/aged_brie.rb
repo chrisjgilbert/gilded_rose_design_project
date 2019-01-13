@@ -5,18 +5,14 @@ require 'generic'
 class AgedBrie < Generic
 
   def update_quality
-    if below_max_quality? and before_sell_in?
+    if below_max_quality? and before_sell_in_period_ends?
       update_quality_by_before_sell_in_amount
-    elsif below_max_quality? and not before_sell_in?
+    elsif below_max_quality? and not before_sell_in_period_ends?
       update_quality_by_after_sell_in_amount
     end
   end
 
   private
-
-  def before_sell_in?
-    @sell_in > 0
-  end
 
   def below_max_quality?
     @quality < 50
