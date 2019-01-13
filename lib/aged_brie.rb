@@ -5,9 +5,9 @@ class AgedBrie < Item
 
   def update_quality
     if below_max_quality? and before_sell_in?
-      update_before_sell_in_quality
+      update_quality_by_before_sell_in_amount
     elsif below_max_quality? and not before_sell_in?
-      update_after_sell_in_quality
+      update_quality_by_after_sell_in_amount
     end
   end
 
@@ -21,11 +21,11 @@ class AgedBrie < Item
     @quality < 50
   end
 
-  def update_before_sell_in_quality
+  def update_quality_by_before_sell_in_amount
     @quality += 1
   end
 
-  def update_after_sell_in_quality
+  def update_quality_by_after_sell_in_amount
     @quality == 49 ? @quality += 1 : @quality += 2
   end
 
