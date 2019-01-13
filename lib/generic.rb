@@ -2,10 +2,12 @@ require 'item'
 require 'decrease_quality_value'
 require 'decrease_sell_in_value'
 require 'sell_in_periods'
+require 'quality_limits'
 
 include DecreaseQuality
 include DescreaseSellIn
 include SellInPeriods
+include QualityLimits
 
 class Generic < Item
 

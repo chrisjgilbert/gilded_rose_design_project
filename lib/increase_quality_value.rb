@@ -12,8 +12,4 @@ module IncreaseQuality
     @quality += 3
   end
 
-  def below_max_quality?
-    @quality < 50
-  end
-
 end

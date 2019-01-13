@@ -8,10 +8,6 @@ module DecreaseQuality
     @quality -= 1
   end
 
-  def above_min_quality?
-    @quality > 0
-  end
-
   def set_quality_at_0
     @quality = 0
   end
