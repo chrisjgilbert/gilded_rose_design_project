@@ -60,12 +60,6 @@
         null,
         null,
         null,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
         null
       ],
       "/Users/chris/CodeProjects/Makers/wk-9/gilded_rose_design_project/lib/items_that_increase_in_quality.rb": [
@@ -219,7 +213,7 @@
         null,
         null,
         1,
-        2,
+        4,
         null,
         null,
         1,
@@ -548,6 +542,6 @@
         null
       ]
     },
-    "timestamp": 1547399591
+    "timestamp": 1547399730
   }
 }

@@ -9,10 +9,4 @@ class AgedBrie < IncreasingItem
     end
   end
 
-  private
-
-  def update_quality_by_1_or_2
-    quality_at_49? ? increase_quality_by_1 : increase_quality_by_2
-  end
-
 end
