@@ -14,10 +14,6 @@ class AgedBrie < Generic
 
   private
 
-  def reduce_sell_in_by_1
-    @sell_in -= 1
-  end
-
   def before_sell_in?
     @sell_in > 0
   end
