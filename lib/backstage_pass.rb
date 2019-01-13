@@ -5,7 +5,7 @@ class BackstagePass < Item
        if during_middle_sell_in_period?
          update_middle_sell_in_period_quality
        elsif during_end_sell_in_period?
-         @quality += 3
+         update_end_sell_in_period
        else
          @quality += 1
        end
@@ -28,6 +28,10 @@ class BackstagePass < Item
 
   def during_end_sell_in_period?
     @sell_in <= 5 and @sell_in> 0
+  end
+
+  def update_end_sell_in_period
+    @quality == 48 ? @quality += 2 : @quality += 3
   end
 
 end
