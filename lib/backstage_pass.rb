@@ -25,20 +25,8 @@ class BackstagePass < Generic
     end
   end
 
-  def during_start_of_sell_in_period?
-    @sell_in > 10
-  end
-
-  def during_middle_of_sell_in_period?
-    @sell_in <= 10 and @sell_in > 5
-  end
-
   def update_quality_by_middle_of_sell_in_period_amount
     @quality == 49 ? increase_quality_by_1 : increase_quality_by_2
-  end
-
-  def during_end_of_sell_in_period?
-    @sell_in <= 5 and @sell_in> 0
   end
 
   def update_quality_by_end_of_sell_in_period_amount

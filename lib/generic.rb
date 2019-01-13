@@ -1,8 +1,11 @@
-require 'item' 
+require 'item'
 require 'decrease_in_value'
 require 'decrease_sell_in_value'
+require 'sell_in_periods'
+
 include DecreaseQuality
 include DescreaseSellIn
+include SellInPeriods
 
 class Generic < Item
 
@@ -19,16 +22,6 @@ class Generic < Item
 
   def update_sell_in
     reduce_sell_in_by_1
-  end
-
-  private
-
-  def after_sell_in_period?
-    @sell_in <= 0
-  end
-
-  def before_sell_in_period_ends?
-    @sell_in > 0
   end
 
 end

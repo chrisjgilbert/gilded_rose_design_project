@@ -7,7 +7,7 @@ class AgedBrie < Generic
 
   def update_quality
     if below_max_quality? and before_sell_in_period_ends?
-      update_quality_by_before_sell_in_amount
+      increase_quality_by_1
     elsif below_max_quality? and not before_sell_in_period_ends?
       update_quality_by_after_sell_in_amount
     end
@@ -15,12 +15,8 @@ class AgedBrie < Generic
 
   private
 
-  def update_quality_by_before_sell_in_amount
-    @quality += 1
-  end
-
   def update_quality_by_after_sell_in_amount
-    @quality == 49 ? @quality += 1 : @quality += 2
+    @quality == 49 ? increase_quality_by_1 : increase_quality_by_2
   end
 
 end
