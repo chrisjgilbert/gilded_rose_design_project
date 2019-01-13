@@ -1,4 +1,4 @@
-class BackstagePass < Item
+class BackstagePass < Generic
 
 #name, sell_in, quality
   def update_quality
@@ -7,10 +7,6 @@ class BackstagePass < Item
     elsif after_sell_in_period?
       reset_quality
     end
-  end
-
-  def update_sell_in
-    reduce_sell_in_by_1
   end
 
   private
@@ -25,9 +21,6 @@ class BackstagePass < Item
     end
   end
 
-  def reduce_sell_in_by_1
-    @sell_in -= 1
-  end
 
   def during_sell_in_period?
     @sell_in > 0
