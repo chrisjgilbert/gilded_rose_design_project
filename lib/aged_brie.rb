@@ -23,6 +23,7 @@ class AgedBrie < Item
 
   def update_quality_by_before_sell_in_amount
     @quality += 1
+    @sell_in -= 1
   end
 
   def update_quality_by_after_sell_in_amount
