@@ -5,11 +5,7 @@ class AgedBrie < Item
 
   def update_quality
     if @quality < 50
-      if @sell_in > 0
-        @quality =+1
-      else
-        @quality +=2
-      end
+      @sell_in > 0 ? @quality += 1 : @quality += 2
     end
   end
 
