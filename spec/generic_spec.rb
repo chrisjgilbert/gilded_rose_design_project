@@ -1,3 +1,5 @@
+require 'generic'
+
 describe Generic do
 
   describe '#update_quality' do
