@@ -5,9 +5,9 @@ class Generic < Item
 # name, sell_in, quality
   def update_quality
     if after_sell_in? and above_min_quality?
-      update_quality_by_2
+      reduce_quality_by_2
     elsif before_sell_in? and above_min_quality?
-      update_quality_by_1
+      reduce_quality_by_1
     else
       set_quality_at_0
     end
@@ -35,11 +35,11 @@ class Generic < Item
     @sell_in > 0
   end
 
-  def update_quality_by_2
+  def reduce_quality_by_2
     @quality -= 2
   end
 
-  def update_quality_by_1
+  def reduce_quality_by_1
     @quality -= 1
   end
 
