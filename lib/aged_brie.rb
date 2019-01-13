@@ -6,9 +6,9 @@ include IncreaseQuality
 class AgedBrie < Generic
 
   def update_quality
-    if below_max_quality? and before_sell_in_period_ends?
+    if below_max_quality? and sell_in_above_10?
       increase_quality_by_1
-    elsif below_max_quality? and not before_sell_in_period_ends?
+    elsif below_max_quality? and not sell_in_above_10?
       update_quality_by_after_sell_in_amount
     end
   end

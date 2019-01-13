@@ -1,10 +1,10 @@
 module SellInPeriods
 
-  def after_sell_in_period?
+  def sell_in_at_0?
     @sell_in <= 0
   end
 
-  def before_sell_in_period_ends?
+  def sell_in_above_10?
     @sell_in > 0
   end
 
