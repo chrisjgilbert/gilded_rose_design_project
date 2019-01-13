@@ -5,7 +5,7 @@ class BackstagePass < Item
     if during_sell_in_period? and below_max_quality?
       update_based_on_sell_in_period
     elsif after_sell_in_period?
-      @quality = 0
+      reset_quality
     end
   end
 
@@ -55,6 +55,10 @@ class BackstagePass < Item
 
   def update_quality_by_end_of_sell_in_period_amount
     @quality == 48 ? @quality += 2 : @quality += 3
+  end
+
+  def reset_quality
+    @quality = 0
   end
 
 end
