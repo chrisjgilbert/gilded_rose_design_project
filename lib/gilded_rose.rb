@@ -4,6 +4,10 @@ class GildedRose
     @items = items
   end
 
+  def update
+    update_quality
+  end
+
   def update_quality
     @items.each do |item|
       item.update_quality
