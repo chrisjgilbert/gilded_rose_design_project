@@ -4,11 +4,6 @@ require 'item'
 describe GildedRose do
 
   describe "#update_quality" do
-    it "does not change the name" do
-      item = Item.new("foo", 0, 0)
-      GildedRose.new([item]).update_quality
-      expect(item.name).to eq "foo"
-    end
 
     it "lowers the sell_in by one after a day" do
       item = Item.new("item", 1, 0)
