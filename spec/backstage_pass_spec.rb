@@ -2,8 +2,17 @@ require 'backstage_pass'
 
 describe BackstagePass do
 
-  describe '#update_quality' do
+  describe '#update_sell_in' do
+    context 'before sell_in' do
+      it 'reduces sell_in by 1' do
+        backstage_pass = BackstagePass.new("Backstage passes to a TAFKAL80ETC concert", 15, 0)
+        backstage_pass.update_sell_in
+        expect(backstage_pass.sell_in).to eq(14)
+      end
+    end
+  end
 
+  describe '#update_quality' do
     context 'when sell_in is greater than 10' do
       it 'increases quality by one after each day' do
         backstage_pass = BackstagePass.new("Backstage passes to a TAFKAL80ETC concert", 15, 0)
