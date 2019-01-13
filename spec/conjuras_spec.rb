@@ -10,4 +10,12 @@ describe Conjuras do
     end
   end
 
+  describe '#update_quality' do
+    it "lowers the quality 2x when during sell in period" do
+      conjuras = Conjuras.new("item", 5, 10)
+      conjuras.update_quality
+      expect(conjuras.quality).to eq 8
+    end
+  end
+
 end
