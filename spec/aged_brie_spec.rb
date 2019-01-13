@@ -4,12 +4,6 @@ describe AgedBrie do
 
   describe '#update_quality' do
 
-    it "does not change the name" do
-      cheese = AgedBrie.new("foo", 0, 0)
-      cheese.update_quality
-      expect(cheese.name).to eq "foo"
-    end
-
     context 'before sell_in' do
       it 'raises quality by one after a day' do
         aged_brie = AgedBrie.new("Aged Brie", 1, 0)
