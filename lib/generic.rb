@@ -14,6 +14,10 @@ class Generic < Item
     end
   end
 
+  def update_sell_in
+    reduce_sell_in_by_1
+  end
+
   private
 
   def reduce_sell_in_by_1
